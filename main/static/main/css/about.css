@@ -1,0 +1,15 @@
+.info {
+    margin-left: 16%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* Отступ сверху для разделения от основного содержимого */
+}
+
+.info p {
+    margin-bottom: 10px; /* Отступ снизу для разделения абзацев */
+}
+
+.info h2 {
+    margin-bottom: 10px; /* Отступ снизу для разделения заголовка и текста */
+}

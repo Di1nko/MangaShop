@@ -1,0 +1,28 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Манга бот{% endblock %}
+
+{% block content %}
+<main class="label">
+    <h1 class="mb_h1">Привет, позволь помочь подобрать нужную тебе мангу ;)</h1>
+</main>
+<div class="info">
+    <form class="mangabot" id="manga-form" action="{% url 'generate' %}" method="post">
+        {% csrf_token %}
+        <label for="topic">Жанр:</label>
+        <input type="text" id="topic" name="topic" required>
+        <button type="submit">Получить предложение</button>
+    </form>
+
+    <!-- Элемент для отображения ответа -->
+    <div class="response"></div>
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    {% if text %}
+        <div class="alert alert-success">{{ text }}</div>
+    {% endif %}
+</div>
+{% endblock %}

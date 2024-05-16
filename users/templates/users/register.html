@@ -1,0 +1,13 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+    <form action="{% url 'register' %}" method="post" class="form-register">
+        <h1>Регистрация</h1>
+        <hr>
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Вступить в наш клуб ;)</button>
+        <a href="{% url 'login' %}">Войти в клуб</a>
+        <a href="{% url 'home' %}">Домой</a>
+    </form>
+{% endblock %}

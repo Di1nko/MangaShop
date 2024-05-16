@@ -1,0 +1,75 @@
+/* Улучшенный CSS для страницы входа */
+
+body {
+    background: rgb(237, 173, 199);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label[type="text"],
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(240, 170, 80, 1);
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(240, 170, 80, 1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: rgba(50, 200, 50);
+}
+
+.login-container a {
+    color: rgb(0,0,0);
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    outline: 1px solid rgba(240, 170, 80, 1); /* Черная обводка толщиной 2px */
+    padding: 5px; /* Добавляем немного отступа вокруг текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}

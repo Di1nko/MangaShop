@@ -1,0 +1,19 @@
+.news-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 40px auto; /* Центрирует элементы и добавляет отступ сверху и снизу */
+    cursor: pointer;
+    background: rgba(50, 200, 50, 0.5); /* Используем rgba для прозрачности */
+    max-width: 800px; /* Ограничиваем максимальную ширину */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    border-radius: 10px; /* Скругляем углы */
+}
+
+.full-text {
+    display: none;
+}
+
+.find_new {
+    display: flex;
+    justify-content: center;
+}

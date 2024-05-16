@@ -1,0 +1,51 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'storage/css/Manga_table.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/table_news.css' %}">
+    <link rel="stylesheet" href="{% static 'mangabot/css/mangabot.css' %}">
+    <script src="{% static 'main/js/table_news.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'mangabot/js/mangabot.js' %}"></script>
+    <link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet'/>
+</head>
+<body>
+    <aside>
+        <li class="list-group">
+            User: {{ user }}
+        </li>
+        <img src="{% static 'main/img/logoShop.png'%}" alt="logo">
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"> Новости</li></a>
+            <a href="{% url 'about' %}"><li> Про магазин</li></a>
+            <a href="{% url 'bot_page' %}"><li> Манга бот</li></a>
+            <a href="{% url 'manga_list' %}"><li> Манга в наличии</li></a>
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button class="log" type="submit">Выйти из аккаунта</button>
+                </form>
+            {% else %}
+                <form action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <button class="log" type="submit">Войти в аккаунт</button>
+                </form>
+            {% endif %}
+        </ul>
+    </aside>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

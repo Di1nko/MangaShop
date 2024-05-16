@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}Манга в наличии{% endblock %}
+{% block content %}main/
+    <main class="label">
+        <h1>Манга в наличии</h1>
+    </main>
+    <div class="info">
+        <main class="main_table">
+        <form method="get" action="{% url 'manga_list' %}">
+        <input type="text" name="q" placeholder="Поиск по названию манги">
+        <input type="submit" value="Поиск">
+    </form>
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Жанр</th>
+            <th>Количество на складе</th>
+        </tr>
+        {% for el in manga %}
+        <tr>
+            <td>{{ el.title }}</td>
+            <td>{{ el.author }}</td>
+            <td>{{ el.genre }}</td>
+            <td>{{ el.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {# Так пишутся комментарии#}
+    </main>
+    </div>
+{% endblock %}

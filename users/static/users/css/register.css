@@ -1,0 +1,60 @@
+/* Общие стили для формы */
+.form-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Ограничиваем ширину формы */
+    margin: 0 auto; /* Центрируем форму по горизонтали */
+    padding: 20px; /* Добавляем отступ внутри формы */
+    background-color: #f8f9fa; /* Фоновый цвет формы */
+    border-radius: 5px; /* Скругление углов формы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+/* Стили для полей ввода и лейблов */
+.form-register label, .form-register input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопки отправки формы */
+.form-register button {
+    padding: 10px 20px; /* Добавляем отступ внутри кнопки */
+    background-color: rgba(240, 170, 80, 1); /* Фоновый цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку кнопки */
+    border-radius: 5px; /* Скругление углов кнопки */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    transition: background-color 0.3s ease; /* Добавляем плавный переход цвета */
+}
+
+.form-register button:hover {
+    background-color: rgba(50, 200, 50); /* Изменяем цвет фона кнопки при наведении */
+}
+
+.form-register hr {
+    border: none; /* Убираем стандартную рамку */
+    height: 2px; /* Высота полосы */
+    background-color: #000; /* Черный цвет */
+    width: 80%; /* Ширина полосы */
+    margin: 20px auto; /* Отступы сверху и снизу, центрирование */
+}
+
+.form-register a {
+    color: rgb(0,0,0);
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    outline: 1px solid rgba(240, 170, 80, 1); /* Черная обводка толщиной 2px */
+    padding: 5px; /* Добавляем немного отступа вокруг текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.form-register a:hover {
+    text-decoration: underline;
+}

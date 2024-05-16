@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ item.title }}{% endblock %}
+
+{% block content %}
+    <div id="news-list">
+            {% for item in manga_news %}
+                <div class="news-item" data-full-text="{{ item.full_text }}">
+                    <h2>{{ item.title }}</h2>
+                    <p>{{ item.anons }}</p>
+                    <button class="show-full-text">Показать полный текст</button>
+                </div>
+            {% endfor %}
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var newsItems = document.querySelectorAll('.news-item');
+            newsItems.forEach(function(item) {
+                var showFullTextButton = item.querySelector('.show-full-text');
+                showFullTextButton.addEventListener('click', function() {
+                    var fullText = item.getAttribute('data-full-text');
+                    alert(fullText); // Используйте alert для простоты, но лучше использовать модальное окно
+                });
+            });
+        });
+    </script>
+
+{% endblock %}

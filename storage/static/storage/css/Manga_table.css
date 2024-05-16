@@ -1,0 +1,37 @@
+/* Общие стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для заголовков таблицы */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Стили для ячеек таблицы */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Стили для строк таблицы */
+tr {
+    background-color: #f2f2f2;
+}
+
+/* Стили для заголовка страницы */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.main_table{
+    padding: 20px;
+}

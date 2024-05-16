@@ -1,0 +1,83 @@
+body {
+    background: rgb(237, 173, 199);
+    font-family: Arial, sans-serif;
+}
+
+aside {
+    position: fixed; /* Фиксированное позиционирование */
+    left: 0; /* Боковая панель по левому краю */
+    top: 0; /* Боковая панель по верхнему краю */
+    background: rgba(246, 189, 96, 1);
+    width: 16%; /* Ширина боковой панели */
+    padding: 2.5%; /* Отступы вокруг содержимого */
+    height: 100vh; /* Полная высота экрана */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Тень вокруг боковой панели */
+    overflow-y: auto; /* Прокрутка внутри aside, если контент превышает высоту экрана */
+}
+
+aside img {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 10px;
+}
+
+aside h3 {
+    margin-top: 150px;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    display: flex; /* Используем flexbox для упорядочивания элементов */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    transition: all .6s ease;
+    padding-left: 20px;
+    color: #FFFFFF;
+
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #000000;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+aside ul a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1; /* Разрешаем ссылкам занимать доступное пространство */
+    cursor: pointer; /* Изменяем курсор на указатель при наведении */
+}
+
+.label {
+    margin-left: 14%;
+    padding: 20px;
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.alert {
+    margin-bottom: 20px;
+}
+
+.list-group{
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    aside {
+        width: 100%; /* Боковая панель занимает всю ширину на маленьких экранах */
+    }
